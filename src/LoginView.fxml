@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="id1" alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@AccountSettings.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="LoginViewController">
+   <children>
+      <HBox prefHeight="100.0" prefWidth="200.0" />
+      <Label fx:id="Id" text="      Id" textAlignment="CENTER" textOverrun="CLIP">
+         <font>
+            <Font name="Arial Black" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="textid" prefHeight="31.0" prefWidth="600.0" />
+      <Label fx:id="Password" text="     Password">
+         <font>
+            <Font name="Arial Black" size="14.0" />
+         </font>
+      </Label>
+      <PasswordField fx:id="textpassword" prefHeight="32.0" prefWidth="600.0" />
+      <HBox prefHeight="44.0" prefWidth="600.0">
+         <children>
+            <Label fx:id="msg" alignment="CENTER" textFill="#cc1616" textOverrun="CENTER_WORD_ELLIPSIS">
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+            </Label>
+         </children></HBox>
+      <HBox prefHeight="100.0" prefWidth="200.0" spacing="50.0">
+         <children>
+            <Button fx:id="previous" mnemonicParsing="false" onAction="#clickreturn" prefHeight="26.0" prefWidth="55.0" text="return" />
+            <Button mnemonicParsing="false" onAction="#clickedok" prefHeight="26.0" prefWidth="36.0" text="ok" />
+            <Button mnemonicParsing="false" onAction="#clickedreset" prefHeight="26.0" prefWidth="49.0" text="reset" />
+         </children>
+         <opaqueInsets>
+            <Insets left="50.0" />
+         </opaqueInsets>
+         <padding>
+            <Insets left="50.0" />
+         </padding>
+      </HBox>
+   </children>
+</VBox>

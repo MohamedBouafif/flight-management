@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox fx:id="id5" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@AccountSettings.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CrewMenuViewController">
+   <children>
+      <HBox alignment="CENTER_LEFT" prefHeight="54.0" prefWidth="600.0">
+         <children>
+            <ToggleButton mnemonicParsing="false" onAction="#accountsettings" prefHeight="30.0" prefWidth="114.0" text="Account Settings" />
+         </children>
+         <VBox.margin>
+            <Insets left="20.0" />
+         </VBox.margin>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="86.0" prefWidth="600.0">
+         <children>
+            <ToggleButton mnemonicParsing="false" onAction="#clickFlights" prefHeight="35.0" prefWidth="150.0" text="Flights " />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="85.0" prefWidth="600.0">
+         <children>
+            <ToggleButton mnemonicParsing="false" onAction="#clickReservation" prefHeight="35.0" prefWidth="150.0" text="Reservations" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="91.0" prefWidth="600.0">
+         <children>
+            <ToggleButton mnemonicParsing="false" onAction="#clickPassagers" prefHeight="35.0" prefWidth="150.0" text="Passagers" />
+         </children>
+      </HBox>
+      <Button mnemonicParsing="false" onAction="#clickreturn" text="return">
+         <VBox.margin>
+            <Insets left="20.0" />
+         </VBox.margin>
+      </Button>
+   </children>
+</VBox>

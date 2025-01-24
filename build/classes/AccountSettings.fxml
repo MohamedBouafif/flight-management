@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="id10" alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="499.0" prefWidth="758.0" stylesheets="@AccountSettings.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AccountSettingsController">
+   <children>
+      <HBox alignment="CENTER" prefHeight="84.0" prefWidth="698.0">
+         <children>
+            <Label fx:id="AccountSettings" prefHeight="74.0" prefWidth="558.0" text="Account Settings" textAlignment="CENTER">
+               <font>
+                  <Font name="Arial Bold" size="48.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" prefHeight="79.0" prefWidth="698.0">
+         <children>
+            <Label prefHeight="76.0" prefWidth="76.0" text="ID">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="20.0" right="50.0" />
+               </HBox.margin>
+            </Label>
+            <Label fx:id="ID" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" prefHeight="84.0" prefWidth="714.0">
+         <children>
+            <ToggleButton mnemonicParsing="false" onAction="#resetpassword" prefHeight="45.0" prefWidth="122.0" text="Reset password">
+               <HBox.margin>
+                  <Insets left="20.0" right="30.0" />
+               </HBox.margin>
+            </ToggleButton>
+            <TextField fx:id="textpassword" prefHeight="45.0" prefWidth="150.0">
+               <opaqueInsets>
+                  <Insets left="20.0" />
+               </opaqueInsets>
+            </TextField>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" prefHeight="82.0" prefWidth="758.0">
+         <children>
+            <Label prefHeight="98.0" prefWidth="185.0" text="Address Mail">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="20.0" right="50.0" />
+               </HBox.margin>
+            </Label>
+            <Label fx:id="mail" prefHeight="60.0" prefWidth="130.0">
+               <HBox.margin>
+                  <Insets right="50.0" />
+               </HBox.margin>
+            </Label>
+            <ToggleButton mnemonicParsing="false" onAction="#resetmail" prefHeight="44.0" prefWidth="75.0" text="Reset" />
+            <TextField fx:id="newEmailField" prefHeight="41.0" prefWidth="150.0">
+               <HBox.margin>
+                  <Insets left="30.0" />
+               </HBox.margin>
+            </TextField>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" prefHeight="83.0" prefWidth="758.0">
+         <children>
+            <Label prefHeight="66.0" prefWidth="206.0" text="Phone Number">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="20.0" right="50.0" />
+               </HBox.margin>
+            </Label>
+            <Label fx:id="phone" prefHeight="58.0" prefWidth="123.0">
+               <HBox.margin>
+                  <Insets right="50.0" />
+               </HBox.margin>
+            </Label>
+            <ToggleButton mnemonicParsing="false" onAction="#resetphone" prefHeight="41.0" prefWidth="75.0" text="Reset" />
+            <TextField fx:id="newPhoneField" prefHeight="41.0" prefWidth="150.0">
+               <HBox.margin>
+                  <Insets left="30.0" />
+               </HBox.margin>
+            </TextField>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" />
+   </children>
+</VBox>

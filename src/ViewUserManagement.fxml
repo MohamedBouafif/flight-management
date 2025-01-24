@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane fx:id="id8" prefHeight="678.0" prefWidth="757.0" stylesheets="@AccountSettings.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UserManagementController">
+    <VBox alignment="CENTER" layoutX="50.0" layoutY="25.0" spacing="10" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.799999999999955" AnchorPane.topAnchor="25.0">
+        <Button fx:id="viewPersons" onAction="#viewPersons" text="View Accounts" />
+        <Button fx:id="addPerson" onAction="#addPerson" text="Add Account" />
+        <Button fx:id="modifyPerson" onAction="#modifyPerson" text="Modify Account" />
+        <Button fx:id="deletePerson" onAction="#deletePerson" text="Delete Account" />
+        <Button fx:id="cancelButton" onAction="#cancelButton" text="Cancel" />
+        
+        <TextField fx:id="textName" promptText="Name" />
+        <TextField fx:id="textAddress" promptText="Address" />
+        <TextField fx:id="textMail" promptText="Email" />
+        <TextField fx:id="textPhone" promptText="Phone" />
+        
+        <ComboBox fx:id="roleComboBox" onAction="#roleComboBox" promptText="Select Role" />
+        <ListView fx:id="accountsListView" prefHeight="200" prefWidth="300" />
+        <Button fx:id="returnButton" onAction="#handleReturnButton" text="Return" />
+    </VBox>
+</AnchorPane>

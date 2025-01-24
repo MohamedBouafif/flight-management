@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane fx:id="id22" prefHeight="594.0" prefWidth="785.0" stylesheets="@AccountSettings.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ReservationController">
+    <children>
+        <VBox alignment="TOP_CENTER" layoutX="11.0" layoutY="14.0" prefHeight="233.0" prefWidth="762.0" spacing="10.0" AnchorPane.leftAnchor="11.0" AnchorPane.rightAnchor="11.400000000000091" AnchorPane.topAnchor="14.0">
+            <!-- Input Fields -->
+            <HBox prefHeight="30.0" prefWidth="744.0" spacing="10.0">
+                <Label prefHeight="16.0" prefWidth="184.0" text="First Name:" />
+                <TextField fx:id="FirstNameField" promptText="Enter first name" />
+            </HBox>
+            <HBox spacing="10.0">
+                <Label prefHeight="16.0" prefWidth="184.0" text="Second Name:" />
+                <TextField fx:id="SecondNameField" promptText="Enter second name" />
+            </HBox>
+            <HBox spacing="10.0">
+                <Label prefHeight="16.0" prefWidth="184.0" text="Date of Birth (yyyy-MM-dd):" />
+                <TextField fx:id="DateOfBirthField" promptText="Enter date of birth" />
+            </HBox>
+            <HBox spacing="10.0">
+                <Label prefHeight="16.0" prefWidth="185.0" text="Passport Number:" />
+                <TextField fx:id="PasseportNumberField" promptText="Enter passport number" />
+            </HBox>
+            <HBox alignment="CENTER" spacing="10.0">
+                <Button onAction="#handleAddPassenger" prefHeight="30.0" prefWidth="160.0" text="Add Passenger" />
+                <Button onAction="#UpdatePassenger" prefHeight="30.0" prefWidth="160.0" text="Update Passenger" />
+                <Button onAction="#HandleEditPassenger" prefHeight="30.0" prefWidth="160.0" text="Edit Passenger" />
+            </HBox>
+        </VBox>
+
+        <!-- ComboBox and Next Button -->
+        <HBox alignment="CENTER" spacing="10.0" AnchorPane.bottomAnchor="10.0" />
+      <Button fx:id="next" layoutX="677.0" layoutY="544.0" mnemonicParsing="false" onAction="#Next" text="Next &gt;&gt;" />
+
+           <!-- Table for displaying passengers -->
+        <TableView fx:id="PassengerTable" layoutX="32.0" layoutY="228.0" prefHeight="316.0" prefWidth="763.0">
+            <columns>
+                <TableColumn fx:id="FirstNameColumn" prefWidth="134.40003061294556" text="First Name" />
+                <TableColumn fx:id="SecondNameColumn" prefWidth="122.39996337890625" text="Second Name" />
+                <TableColumn fx:id="DateOfBirthColumn" prefWidth="129.5999755859375" text="Date of Birth" />
+                <TableColumn fx:id="PasseportNumberColumn" prefWidth="155.19998168945312" text="Passport Number" />
+            <TableColumn fx:id="seatNumber" prefWidth="114.40008544921875" text="Seat Number" />
+            </columns>
+        </TableView>
+    </children>
+</AnchorPane>

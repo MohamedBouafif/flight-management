@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox fx:id="id11" prefHeight="552.0" prefWidth="921.0" spacing="10" style="-fx-padding: 20;" stylesheets="@AccountSettings.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AirportManagementController">
+    <children>
+        <Label prefHeight="53.0" prefWidth="276.0" style="-fx-font-size: 18px; -fx-font-weight: bold;" text="AirCrafts Management System" />
+
+        <TableView fx:id="AircraftTable" prefHeight="335.0" prefWidth="882.0" VBox.vgrow="ALWAYS">
+            <columns>
+                <TableColumn fx:id="name" prefWidth="123.99996948242188" text="Name" />
+                <TableColumn fx:id="model" prefWidth="106.4000244140625" text="Model" />
+                <TableColumn fx:id="dateOfFabrication" prefWidth="103.20001220703125" text="Date of Fabrication" />
+                <TableColumn fx:id="status" prefWidth="85.5999755859375" text="Status" />
+                <TableColumn fx:id="seatNumber" prefWidth="120.0" text="Number of seats" />
+            </columns>
+        </TableView>
+
+        <!-- Form to Add Aircraft -->
+        <HBox prefHeight="82.0" prefWidth="882.0" spacing="10">
+            <TextField fx:id="AircrafName" prefHeight="34.0" prefWidth="150.0" promptText="Aircraft Name" />
+            <TextField fx:id="AircraftModel" prefHeight="34.0" prefWidth="150.0" promptText="Model" />
+            <TextField fx:id="AircraftDateOfFabrication" prefHeight="34.0" prefWidth="150.0" promptText="Date of Fabrication (yyyy-MM-dd)" />
+            <ComboBox fx:id="AircraftStatus" prefHeight="34.0" prefWidth="150.0" promptText="Status" />
+            <TextField fx:id="departureAircraftNumberOfSeats" prefHeight="35.0" prefWidth="150.0" promptText="Number of seats" />
+            <Button onAction="#handleAddAircraft" prefHeight="35.0" prefWidth="80.0" text="Add Aircraft" />
+        </HBox>
+      <HBox prefHeight="72.0" prefWidth="882.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#handleEditAircraft" prefHeight="34.0" prefWidth="94.0" text="Select">
+               <HBox.margin>
+                  <Insets right="20.0" />
+               </HBox.margin>
+            </Button>
+      
+              <!-- Button to Edit Selected Aircraft -->
+              <Button mnemonicParsing="false" onAction="#handleUpdateAircraft" prefHeight="35.0" prefWidth="94.0" text="Modify" />
+         </children>
+      </HBox>
+
+        <!-- Filter and Reset Table -->
+        <HBox prefHeight="63.0" prefWidth="882.0" spacing="10">
+            <TextField fx:id="statusFilterField" prefHeight="35.0" prefWidth="150.0" promptText="Filter by Status" />
+            <Button onAction="#handleFilterByStatus" prefHeight="35.0" prefWidth="78.0" text="Filter">
+            <HBox.margin>
+               <Insets left="20.0" />
+            </HBox.margin></Button>
+            <Button onAction="#handleResetTable" prefHeight="35.0" prefWidth="96.0" text="Reset Table">
+            <HBox.margin>
+               <Insets left="20.0" />
+            </HBox.margin></Button>
+        </HBox>
+    </children>
+</VBox>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="AnchorPane" fx:id="id16" prefHeight="412.0" prefWidth="854.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/23.0.1" fx:controller="FlightsCrewController" stylesheets="@AccountSettings.css">
+    <children>
+        <Label style="-fx-font-size: 18px; -fx-font-weight: bold;" text="Flight Management System" />
+
+        
+        <TableView fx:id="flightTable" layoutY="30.0" prefHeight="310.0" prefWidth="844.0" VBox.vgrow="ALWAYS">
+            <columns>
+                <TableColumn fx:id="numberColumn" prefWidth="123.99996948242188" text="Flight Number" />
+                <TableColumn fx:id="departureColumn" prefWidth="106.4000244140625" text="Departure Airport" />
+                <TableColumn fx:id="arrivalColumn" prefWidth="103.20001220703125" text="Arrival Airport" />
+                <TableColumn fx:id="statusColumn" prefWidth="85.5999755859375" text="Status" />
+                
+                <!-- New columns for time and duration -->
+                <TableColumn fx:id="timeColumn" prefWidth="150.0" text="Departure Time" />
+                <TableColumn fx:id="durationColumn" prefWidth="120.0" text="Duration" />
+                <TableColumn fx:id="aircraftColumn" prefWidth="150.0" text="Assigned Aircraft" />
+            </columns>
+        </TableView>
+       
+        <HBox spacing="10" />
+      <HBox layoutX="16.0" layoutY="354.0" prefHeight="58.0" prefWidth="350.0">
+         <children>
+               <TextField fx:id="statusFilterField" promptText="Filter by Status">
+               <HBox.margin>
+                  <Insets left="20.0" right="20.0" />
+               </HBox.margin>
+            </TextField>
+               <Button onAction="#handleFilterByStatus" text="Filter">
+               <HBox.margin>
+                  <Insets right="20.0" />
+               </HBox.margin>
+            </Button>
+               <Button onAction="#handleResetTable" text="Reset Table" />
+         </children>
+      </HBox>
+    </children>
+</AnchorPane>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="id0" alignment="CENTER" fillWidth="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="465.0" prefWidth="685.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MainViewController">
+   <children>
+      <Label alignment="CENTER" contentDisplay="CENTER" graphicTextGap="8.0" text="Welcome to AirLine Manager" textFill="#5577bc" textOverrun="CLIP">
+         <font>
+            <Font name="Arial" size="33.0" />
+         </font>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+      </Label>
+      <ImageView fitHeight="314.0" fitWidth="510.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@/flight.jpg" />
+         </image>
+      </ImageView>
+      <HBox alignment="CENTER" cache="true" nodeOrientation="RIGHT_TO_LEFT" prefHeight="71.0" prefWidth="488.0" spacing="20.0">
+         <children>
+            <Button fx:id="logPilote" mnemonicParsing="false" onAction="#logaspilote" prefHeight="26.0" prefWidth="121.0" style="-fx-background-color: #082032; -fx-text-fill: white; -fx-font-size: 14px; -fx-border-radius: 10px; -fx-padding: 10px;" text="Log in as pilote" textFill="WHITE" />
+            <Button fx:id="logCrew" mnemonicParsing="false" onAction="#logascrew" prefHeight="26.0" prefWidth="122.0" style="-fx-background-color: #1e2a47; -fx-text-fill: white; -fx-font-size: 14px; -fx-border-radius: 10px; -fx-padding: 10px;" text="Log in as crew" />
+            <Button fx:id="logAdmin" mnemonicParsing="false" onAction="#logasadmin" prefHeight="26.0" prefWidth="126.0" style="-fx-background-color: #4c6a91; -fx-text-fill: white; -fx-font-size: 14px; -fx-border-radius: 10px; -fx-padding: 10px;" text="Log in as admin " />
+         </children>
+      </HBox>
+   </children>
+</VBox>
